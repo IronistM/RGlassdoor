@@ -2,10 +2,26 @@ Package: RGlassdoor
 Type: Package
 Title: What the Package Does (Title Case)
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: Manos Parzakonis
+Authors@R: c(
+    person('Manos','Parzakonis',email='parzakonis.m@gmail.com',role=c('aut','cre'))
+    )
+Maintainer: Manos Parzakonis <parzakonis.m@gmail.com>
+Description: The R way to interact with Glassdoor API
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+Depends:
+    R (>= 3.2.0)
+Imports:
+    httr (>= 1.2.1),
+    jsonlite (>= 1.0),
+    magrittr (>= 1.5),
+    tidyjson (>= 0.2.1),
+    testthat (>= 1.0.2),
+    utils
+Suggests:
+    knitr,
+    dplyr (>= 0.5.0),
+    rmarkdown
+RoxygenNote: 6.0.1
