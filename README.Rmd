@@ -12,5 +12,32 @@ knitr::opts_chunk$set(
 )
 ```
 
+# RGlassdoor
 [![Build Status](https://travis-ci.org/IronistM/RGlassdoor.svg?branch=master)](https://travis-ci.org/IronistM/RGlassdoor)
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/RGlassdoor)](https://cran.r-project.org/package=RGlassdoor)
+
+##Intro
+The Glassdoor API is a simple, lightweight REST API that responds to http requests with JSON (future support for XML is planned). Because it is a REST API, it is completely stateless. Requests are expected to be made in the form of a simple HTTP GET.
+
+Unless otherwise noted, these APIs are available for public use with a free Glassdoor account and pending a short approval process. The APIs that are not provided publicly are available to our API partners. If you're interested in becoming an API partner, please contact us.
+
+
+|Parameter |Explanation |Required? |
+|---: | --- | --- |
+|v|The API version. The current version is 1 except for jobs, which is currently version 1.1|Yes|
+|format|Either xml or json as you prefer|Yes|
+|t.p|Your partner id, as assigned by Glassdoor|Yes|
+|t.k|Your partner key, as assigned by Glassdoor|Yes|
+|userip|The IP address of the end user to whom the API results will be shown|Yes|
+|useragent|The User-Agent (browser) of the end user to whom the API results will be shown. Note that you can can obtain this from the "User-Agent" HTTP request header from the end-user|Yes|
+|callback|If json is the requested format, you may specify a jsonp callback here, allowing you to make cross-domain calls to the glassdoor API from your client-side javascript. See the JSONP wikipedia entry for more information on jsonp.|No|
+|action|The particular API call that you would like to make - see jobs, reviews, salaries, etc. sub-sections for details|Yes|
+|other|Each API action will require different parameters - in the example above, an employerId is passed in order to retrieve reviews.|Varies|
+
+## Response Codes
+
+You can always count on a high level success flag which will be either true or false, and status which will typically indicate additional information. If the call is successful, there will be a 'response' block. Common statuses are:
+
+`OK`: request succeeded
+`Access-Denied`: your partner id/key are not correct, or not specified. Check the t.p and t.k params in your request
+Call-specific errors: for example on employer retrieval, it can return Employer-Not-Found
