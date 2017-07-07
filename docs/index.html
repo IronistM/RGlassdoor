@@ -80,60 +80,60 @@
 <a href="#intro" class="anchor"></a>Intro</h2>
 <p>The Glassdoor API is a simple, lightweight REST API that responds to http requests with JSON (future support for XML is planned). Because it is a REST API, it is completely stateless. Requests are expected to be made in the form of a simple HTTP GET.</p>
 <p>Unless otherwise noted, these APIs are available for public use with a free Glassdoor account and pending a short approval process. The APIs that are not provided publicly are available to our API partners. If you’re interested in becoming an API partner, please contact us.</p>
-<table style="width:17%;" class="table">
+<table style="width:18%;" class="table">
 <colgroup>
-<col width="5%">
+<col width="6%">
 <col width="5%">
 <col width="5%">
 </colgroup>
 <thead><tr class="header">
-<th>Parameter</th>
+<th align="right">Parameter</th>
 <th>Explanation</th>
 <th>Required?</th>
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td>v</td>
+<td align="right">v</td>
 <td>The API version. The current version is 1 except for jobs, which is currently version 1.1</td>
 <td>Yes</td>
 </tr>
 <tr class="even">
-<td>format</td>
+<td align="right">format</td>
 <td>Either xml or json as you prefer</td>
 <td>Yes</td>
 </tr>
 <tr class="odd">
-<td>t.p</td>
+<td align="right">t.p</td>
 <td>Your partner id, as assigned by Glassdoor</td>
 <td>Yes</td>
 </tr>
 <tr class="even">
-<td>t.k</td>
+<td align="right">t.k</td>
 <td>Your partner key, as assigned by Glassdoor</td>
 <td>Yes</td>
 </tr>
 <tr class="odd">
-<td>userip</td>
+<td align="right">userip</td>
 <td>The IP address of the end user to whom the API results will be shown</td>
 <td>Yes</td>
 </tr>
 <tr class="even">
-<td>useragent</td>
+<td align="right">useragent</td>
 <td>The User-Agent (browser) of the end user to whom the API results will be shown. Note that you can can obtain this from the “User-Agent” HTTP request header from the end-user</td>
 <td>Yes</td>
 </tr>
 <tr class="odd">
-<td>callback</td>
+<td align="right">callback</td>
 <td>If json is the requested format, you may specify a jsonp callback here, allowing you to make cross-domain calls to the glassdoor API from your client-side javascript. See the JSONP wikipedia entry for more information on jsonp.</td>
 <td>No</td>
 </tr>
 <tr class="even">
-<td>action</td>
+<td align="right">action</td>
 <td>The particular API call that you would like to make - see jobs, reviews, salaries, etc. sub-sections for details</td>
 <td>Yes</td>
 </tr>
 <tr class="odd">
-<td>other</td>
+<td align="right">other</td>
 <td>Each API action will require different parameters - in the example above, an employerId is passed in order to retrieve reviews.</td>
 <td>Varies</td>
 </tr>
@@ -152,7 +152,14 @@
 
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2 class="hasAnchor">
-<a href="#sidebar" class="anchor"></a>License</h2>
+<a href="#sidebar" class="anchor"></a>Links</h2>
+<ul class="list-unstyled">
+<li>Browse source code at <br><a href="https://github.com/IronistM/RGlassdoor">https://​github.com/​IronistM/​RGlassdoor</a>
+</li>
+<li>Report a bug at <br><a href="https://github.com/IronistM/RGlassdoor/issues">https://​github.com/​IronistM/​RGlassdoor/​issues</a>
+</li>
+</ul>
+<h2>License</h2>
 <p><a href="https://opensource.org/licenses/mit-license.php">MIT</a> + file <a href="LICENSE.html">LICENSE</a></p>
 <h2>Developers</h2>
 <ul class="list-unstyled">

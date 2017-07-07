@@ -25,3 +25,5 @@ Suggests:
     dplyr (>= 0.5.0),
     rmarkdown
 RoxygenNote: 6.0.1
+URL: https://github.com/IronistM/RGlassdoor
+BugReports: https://github.com/IronistM/RGlassdoor/issues
