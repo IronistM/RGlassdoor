@@ -5,6 +5,8 @@ branches:
     - master
 
 language: r
+
+r:
   - release
 r_github_packages:
   - hadley/devtools
