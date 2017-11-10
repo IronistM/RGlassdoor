@@ -4,7 +4,13 @@ branches:
   only:
     - master
 
-language: R
+language: r
+  - release
+r_github_packages:
+  - hadley/devtools
+  - mangothecat/callr
+  - sailthru/tidyjson
+
 sudo: false
 cache: packages
 
